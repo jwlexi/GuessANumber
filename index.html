@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Alexis - Guess a Number</title>
+
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	 crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+
+	<!-- JavaScript Bundle with Popper for Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+	crossorigin="anonymous">
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1 class="display-1 bg-white text-dark text-center p-5"><strong>Guess a Number</strong></h1>
+            <div id="win-stats" class="text-success font-weight-bold">
+                <span>Wins: </span>
+                <span id="win-count">0</span>
+            </div>
+            <div id="lose-stats" class="text-danger font-weight-bold">
+                <span>Losses: </span>
+                <span id="lose-count">0</span>
+            </div>
+	  </header>
+    <div class = "gan">
+        Guess a number between 1 and 99 in seven attempts!
+    </div>
+
+    <div class="text-center">
+      <span id="enter-number"><strong>Enter a number:</strong></span>
+      <input id="userNum" type="text">
+      <button id="submitGuess">Submit Guess</button>
+    </div>
+
+    <div class="after-submit text-center">
+      <div class="prev-guesses"><strong></strong></div>
+      <div class="verdict"><strong></strong></div>
+      <!-- <div class="num"></div> -->
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>

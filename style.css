@@ -1,0 +1,22 @@
+body {
+    background-image: url("https://lh3.googleusercontent.com/proxy/xdOCI3p9nfZranf9LYeEuQibqpIQFmZMPfcQfWUgGXcI5ApM2YzfULGGlLN9HaaNYCNn5nD1MXGtE0NS1RbsxuwdITffET9wSfBO3mRPgNKF4g");
+    background-size: cover;
+}
+.container{
+    background-color:#edf2f9;
+    padding: 1em;
+}
+img {
+  height: 100px;
+  width: 100%;
+  background-size: cover;
+}
+
+.gan, #win-stats, #lose-stats {
+  text-align: center;
+  font-size: 35px;
+}
+
+#enter-number {
+  font-size: 150%;
+}
