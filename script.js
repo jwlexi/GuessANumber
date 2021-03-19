@@ -2,7 +2,7 @@
 var randomNumber = Math.floor(Math.random() * 99) + 1;
 
 var numOfTries = 1;
-var guesses = "Previous guesses: ";
+var guesses = "";
 var wins = 0;
 var losses = 0;
 var winCount = $("#win-count");
@@ -11,18 +11,17 @@ var box = $("#userNum");
 var resetGame = false;
 document.querySelector("#submitGuess").addEventListener("click", submitGuess);
 
-document.querySelector(".verdict").innerHTML = "Verdict will display here";
-document.querySelector(".verdict").style.backgroundColor = "lightgray";
-document.querySelector(".prev-guesses").innerHTML = guesses;
+// document.querySelector(".prev-guesses").innerHTML = guesses;
 
 function reset() {
   randomNumber = Math.floor(Math.random() * 99) + 1;
   numOfTries = 1;
   guesses = "Previous guesses: ";
   box.val(" ");
-  document.querySelector(".prev-guesses").innerHTML = guesses;
-  document.querySelector(".verdict").innerHTML = "Verdict will display here";
+  document.querySelector(".prev-guesses").innerHTML = "";
   document.querySelector(".verdict").style.backgroundColor = "lightgray";
+  $(".verdict").html("");
+  $(".gan").html("Guess a number between 1 and 99 in seven attempts!")
   document.querySelector("#submitGuess").innerHTML = "Submit Guess";
   resetGame = false;
 }
@@ -39,7 +38,7 @@ function submitGuess() {
   let verdictBackgroundColor = "";
 
   if (numOfTries > 7 || (numOfTries == 7 && userInput != randomNumber)) {
-    alert("No more tries left, submit to start over");
+    alert("No more tries left, press OK to start over");
     document.querySelector(".verdict").style.backgroundColor = "red";
     losses++;
     loseCount.html(losses);
@@ -74,6 +73,7 @@ function submitGuess() {
       document.querySelector(".verdict").innerHTML = verdict;
       document.querySelector(".verdict").style.backgroundColor = verdictBackgroundColor;
       resetGame = true;
+      $(".gan").html("Press restart to play again")
       document.querySelector("#submitGuess").innerHTML = "Restart";
       return;
     }
